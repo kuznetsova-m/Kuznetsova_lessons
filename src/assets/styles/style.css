@@ -1,42 +1,83 @@
-.posts {
-    padding: 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f8f9fa;
+    color: #333;
 }
 
-.posts__items {
+/* Контейнер постов */
+#posts {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-.posts__pagination {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
+/* Одна карточка поста */
+.post {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.post-item {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 16px;
-    border: 1px solid black;
+.post h3 {
+    margin-top: 0;
 }
 
-.post-item__title {
-    margin: 0;
+.post a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
 }
 
-.posts__pagination-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
+.post a:hover {
+    text-decoration: underline;
 }
 
-.posts__pagination-item-active {
-    background-color: black;
+/* Пагинация */
+#pagination {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#pagination button {
+    margin: 0 5px;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
     color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#pagination button:disabled {
+    background-color: #6c757d;
+    cursor: default;
+}
+
+/* Детальная страница */
+#post {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* Комментарии */
+#comments {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comment {
+    margin-bottom: 20px;
+}
+
+.comment p {
+    margin: 5px 0;
 }
