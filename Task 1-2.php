@@ -7,10 +7,10 @@
 
   # Задание 2:
   function getTimeWithWords() {
-      $hours = (int)date('G');      // Час в 24-часовом формате без ведущих нулей (0-23)
-      $minutes = (int)date('i');    // Минуты с ведущими нулями (00-59)
+      $hours = (int)date('G');     
+      $minutes = (int)date('i');     
 
-      // Определяем склонение для "час"
+      # Определяем склонение для "час"
       if ($hours % 10 == 1 && $hours % 100 != 11) {
           $hoursWord = "час";
       } elseif (in_array($hours % 10, [2, 3, 4]) && !in_array($hours % 100, [12, 13, 14])) {
@@ -19,7 +19,7 @@
           $hoursWord = "часов";
       }
 
-      // Определяем склонение для "минута"
+      # Определяем склонение для "минута"
       if ($minutes % 10 == 1 && $minutes % 100 != 11) {
           $minutesWord = "минута";
       } elseif (in_array($minutes % 10, [2, 3, 4]) && !in_array($minutes % 100, [12, 13, 14])) {
